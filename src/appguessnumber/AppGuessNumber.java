@@ -26,9 +26,9 @@ public class AppGuessNumber {
         int count = 0;
         Random ran = new Random();
         Scanner scan = new Scanner(System.in);
-        numRandom = ran.nextInt(10);
+        numRandom = ran.nextInt(100);
         //  System.out.println("Number is "+numRondom);
-        while (count <= 3) {
+        while (count <= 2) {
 
             System.out.println("Euner your guess : ");
             numGuess = scan.nextInt();
