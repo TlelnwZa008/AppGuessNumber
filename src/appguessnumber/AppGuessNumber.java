@@ -4,6 +4,9 @@
  */
 package appguessnumber;
 
+import java.util.Random;
+import java.util.Scanner;
+
 /**
  *
  * @author 344_04
@@ -15,6 +18,36 @@ public class AppGuessNumber {
      */
     public static void main(String[] args) {
         // TODO code application logic here
+
+        Random r = new Random();
+
+        int numRandom;
+        int numGuess;
+        int count = 0;
+        Random ran = new Random();
+        Scanner scan = new Scanner(System.in);
+        numRandom = ran.nextInt(10);
+        //  System.out.println("Number is "+numRondom);
+        while (count <= 3) {
+
+            System.out.println("Euner your guess : ");
+            numGuess = scan.nextInt();
+            //System.out.println("compair : "+ (numRandom==numGuess));
+
+            if (numGuess == numRandom) {
+                System.out.println("You win !");
+                 break;
+            } else if (numGuess > numRandom) {
+                System.out.println("<<<<< decrement");
+                count++;
+            } else if (numGuess < numRandom) {
+                System.out.println("Increment >>>>>");
+                count++;
+            }
+        }
+        if (count >= 3) {
+            System.out.println("You loose !!");
+
+        }
     }
-    
 }
